@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 
+#0 represents our camera
 cap = cv2.VideoCapture(0)
 back = cv2.imread('./image.jpg')
 
@@ -37,7 +38,7 @@ while cap.isOpened():
     # cv2.show("mask", part2)
 
     cv2.imshow("cloak", part1 + part2)
-
+    #this line indicated when q is pressed window will close
     if cv2.waitKey(5) == ord('q'):
         break
 
